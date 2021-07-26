@@ -24,9 +24,11 @@ int main(){
     cout<<"Primer elemento: "<<*MyList.Begin()<<"\n";
     cout<<"Ultimo elemento: "<<*MyList.End()<<"\n";
     cout<<"//////////////////////////////////////////////////////////////////////\n";
-    IteratorList<int> iterator(MyList);
-    for(iterator.First();iterator.HaveNext();iterator.Next()){
-        cout<<*iterator.Current()<<" -> ";
+    IteratorList<int> iterator;
+    cout<<"imprimir mediante iterator: \n";
+    for(iterator=MyList.Begin();iterator!=nullptr;iterator++){
+        cout<<iterator<<" -> ";
     }
     return 0;
+
 }
